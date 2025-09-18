@@ -1,0 +1,39 @@
+{
+  "name": "studio-management-desktop",
+  "version": "1.0.0",
+  "description": "Desktop application for Studio Management System",
+  "main": "src/main.js",
+  "scripts": {
+    "electron": "electron .",
+    "electron:dev": "concurrently \"npm run dev:react\" \"wait-on http://localhost:3000 && electron .\"",
+    "dev:react": "cd ../frontend && npm run dev",
+    "build": "npm run build:react && electron-builder",
+    "build:react": "cd ../frontend && npm run build",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "electron-updater": "^6.6.2"
+  },
+  "devDependencies": {
+    "electron": "^38.1.2",
+    "electron-builder": "^26.0.12",
+    "concurrently": "^9.2.1",
+    "wait-on": "^9.0.0"
+  },
+  "build": {
+    "appId": "com.studio.management",
+    "productName": "Studio Management System",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icons/icon.ico"
+    }
+  }
+} 
