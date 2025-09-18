@@ -21,17 +21,6 @@
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-  <img src="docs/images/dashboard.png" width="45%" alt="Dashboard" />
-  <img src="docs/images/booking.png" width="45%" alt="Booking System" />
-  <br/>
-  <em>Dashboard Analytics & Booking Calendar</em>
-</div>
-
----
-
 ## 🚀 Quick Start
 
 Chỉ cần **3 bước** để chạy dự án:
